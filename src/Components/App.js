@@ -14,8 +14,8 @@ function App() {
 
   // смотрим сторадж есть ли там тема
   let lastTheme = localStorage.getItem('lastTheme');
-  lastTheme= JSON.parse(lastTheme);
-  if (lastTheme !== settings.theme) {setSettings({...settings, theme: lastTheme})};
+  lastTheme = JSON.parse(lastTheme);
+  if (lastTheme !== settings.theme && lastTheme !== null) {setSettings({...settings, theme: lastTheme})};
 
   // устанавливаем тему на html
   document.documentElement.setAttribute('datatheme', settings.theme);
