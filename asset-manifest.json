@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/WebsiteCard/static/css/main.4c77814f.css",
+    "main.js": "/WebsiteCard/static/js/main.adb4f8cc.js",
+    "static/js/787.4559ef90.chunk.js": "/WebsiteCard/static/js/787.4559ef90.chunk.js",
+    "static/media/DSC00014-4.jpg": "/WebsiteCard/static/media/DSC00014-4.f8e34979543fb50b5b16.jpg",
+    "static/media/landingMonitor.jpg": "/WebsiteCard/static/media/landingMonitor.ee24f7cc2b7713f3cdd9.jpg",
+    "static/media/Monitor.png": "/WebsiteCard/static/media/Monitor.4b6dc3b0740488173f7a.png",
+    "static/media/landingPhone.jpg": "/WebsiteCard/static/media/landingPhone.4e3661d3fcf2c0087548.jpg",
+    "static/media/serviseScanMonitor.jpg": "/WebsiteCard/static/media/serviseScanMonitor.59147d1f7d2f62f85d09.jpg",
+    "static/media/messengerMonitor.jpg": "/WebsiteCard/static/media/messengerMonitor.916b374f82367b494780.jpg",
+    "static/media/serviseScanPhone.jpg": "/WebsiteCard/static/media/serviseScanPhone.eaf31e21e578c8c43066.jpg",
+    "static/media/canbanBoardMonitor.jpg": "/WebsiteCard/static/media/canbanBoardMonitor.116c15c833ddafc02030.jpg",
+    "static/media/messengerPhone.jpg": "/WebsiteCard/static/media/messengerPhone.53aeb28c2c7866e75e34.jpg",
+    "static/media/canbanBoardPhone.jpg": "/WebsiteCard/static/media/canbanBoardPhone.e80d9025b663f9c2fc5c.jpg",
+    "static/media/Phone.png": "/WebsiteCard/static/media/Phone.2c3c6aec274acc4c4f34.png",
+    "index.html": "/WebsiteCard/index.html",
+    "main.4c77814f.css.map": "/WebsiteCard/static/css/main.4c77814f.css.map",
+    "main.adb4f8cc.js.map": "/WebsiteCard/static/js/main.adb4f8cc.js.map",
+    "787.4559ef90.chunk.js.map": "/WebsiteCard/static/js/787.4559ef90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c77814f.css",
+    "static/js/main.adb4f8cc.js"
+  ]
+}
