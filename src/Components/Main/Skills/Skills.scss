@@ -1,0 +1,98 @@
+@import '../../App.scss';
+
+
+.grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: auto;
+    font-size: 50px;
+  
+    .itemGrid {
+        height: 150px;
+        color: $color-title;
+        background-image: $bg-image;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  
+        .iconGrid {
+            color: $color-title;
+            background-image: $bg-image;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+
+@media screen and (max-device-aspect-ratio: 8/5) and (min-device-aspect-ratio: 1/1) {
+    .skills {
+        display: flex;
+    }
+
+    .wrapperInfoSkills {
+        flex-grow: 1;
+        padding: 0 50px !important;
+    }
+
+    .grid {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        font-size: 35px;
+
+        .itemGrid {
+            height: auto;
+        }
+    }
+}
+
+
+@media screen and (orientation: portrait) {
+    .wrapperInfoSkills {
+        display: flex;
+        justify-content: center;
+        padding: 0 50px 0 50px !important;
+    }
+
+    .grid {
+        width: 70%;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 35px;
+      
+        .itemGrid {
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .wrapperInfoSkills {
+        padding: 0 50px 0 50px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid {
+        width: 100%;
+        font-size: 35px;
+
+        .itemGrid {
+            height: 100px;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .wrapperInfoSkills {
+        padding: 0 20px 0 20px !important;
+    }
+
+    .grid {
+        font-size: 35px;
+    }
+}

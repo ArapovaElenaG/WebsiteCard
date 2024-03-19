@@ -1,0 +1,98 @@
+@import '../../App.scss';
+
+.wrapperProject {
+    margin-top: 20px;
+
+    .wrapperDevises {
+        display: flex;
+        min-width: 450px;
+
+        .monitor {
+            width: 300px;
+            height: 250px;
+            background-image: url(../../../images/Monitor.png);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+    
+            .imgMonitor {
+                width: 243px;
+                height: 139px;
+                position: relative;
+                top: 18px;
+                left: 29px;
+                overflow: auto;
+    
+                .img {
+                    width: 240px;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    
+        .phone {
+            width: 150px;
+            height: 250px;
+            background-image: url(../../../images/Phone.png);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+    
+            .imgPhone {
+                width: 72px;
+                height: 131px;
+                position: relative;
+                top: 80px;
+                left: 39px;
+                overflow: auto;
+    
+                .img {
+                    width: 69px;
+                    margin-bottom: -2px;
+                }
+            }
+        }
+    
+    
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+          
+        ::-webkit-scrollbar-track {
+            background: $bg-panel;
+            border-radius: 2px;
+        }
+          
+        ::-webkit-scrollbar-thumb {
+            background-color: $color-title;
+            border-radius: 2px;
+        }
+          
+        ::-webkit-scrollbar-thumb:hover {
+            background-image: $bg-image;
+        }
+    }
+
+    .description {
+        margin: 10px 0 50px;
+        font-size: 16px;
+
+        .a {
+            color: $color-title;
+            // background-image: $bg-image;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // text-decoration: underline;
+        }
+    }
+}
+
+// (orientation: portrait)
+@media screen and (max-width: 1200px) {
+    .wrapperDevises {
+        min-width: 600px;
+    }
+}
+

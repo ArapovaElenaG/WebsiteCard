@@ -1,0 +1,192 @@
+@import '../App.scss';
+
+
+.header {
+    height: 100vh;
+    width: 4%;
+    color: $color-icons;
+    background-color: $bg;
+    font-size: 18px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 0 50px;
+
+    .icon-moon, .icon-sun, .icon-palette {
+        margin: 5px;
+    }
+
+    .nav {
+
+        .ul {
+            padding: 0;
+            text-align: center;
+            
+            .li {
+                list-style-type: none;
+                margin-bottom: 30px;
+                
+
+                .navLink {
+                    display: block;
+                    color: $color-icons;
+                    width: inherit;
+                    text-decoration: none;
+                }
+
+                .active {
+                    color: $color-icons-active;
+                    background-image: $bg-image;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+
+    .settings {
+        position: relative;
+
+        .theme {
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .dropdownTheme {
+                display: none;
+                transition: display 1s linear 0s;
+                // transition-duration: 1s;
+                // transition-property: display;
+                // transition-delay: 3s;
+
+                .dDcontent:hover {
+                    color: $color-icons-active;
+                    background-image: $bg-image;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .pink {
+                    color: #be9ca1;
+                }
+
+                .green {
+                    color: #7b8274;
+                }
+            }
+        }
+
+        .theme:hover .dropdownTheme {
+            display: block;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .language {
+            text-align: center;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        
+    }
+
+}
+
+
+
+@media screen and (max-device-aspect-ratio: 8/5) { 
+    .header {
+        height: 60px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0 50px 0 70px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+        .nav {
+            display: flex;
+            align-items: center;
+            
+            .ul {
+                display: flex;
+
+                .li {
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                }
+            }
+        }
+    
+        .settings {
+            display: flex;
+            align-items: center;
+    
+            .theme {
+                margin-bottom: 0px;
+                margin-right: 20px;
+                flex-direction: row-reverse;
+            }
+
+            .theme:hover .dropdownTheme {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 950px) { 
+    .header {
+        height: 60px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0 50px 0 50px;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+        .nav {
+            display: flex;
+            align-items: center;
+            
+            .ul {
+                display: flex;
+
+                .li {
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                }
+            }
+        }
+    
+        .settings {
+            display: flex;
+            align-items: center;
+    
+            .theme {
+                margin-bottom: 0px;
+                margin-right: 20px;
+                flex-direction: row-reverse;
+            }
+
+            .theme:hover .dropdownTheme {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .header {
+        height: 45px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+}

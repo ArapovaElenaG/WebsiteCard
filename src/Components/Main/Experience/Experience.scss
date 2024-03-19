@@ -1,0 +1,51 @@
+@import '../../App.scss';
+
+
+.itemInfoExperience {
+    max-width: 80%;
+    min-width: 400px;
+}
+
+@media screen and (max-device-aspect-ratio: 8/5) {
+    .wrapperInfoExperience {
+        display: flex;
+        justify-content: space-between;
+
+        .itemInfoExperience {
+            min-width: 22%;
+            width: 22%;
+        }
+    }
+}
+
+// @media screen and (orientation: portrait) {
+//     .wrapperInfoExperience {
+//         display: flex;
+//         justify-content: space-between;
+
+//         .itemInfoExperience {
+//             min-width: 22%;
+//             width: 22%;
+//         }
+//     }
+// }
+
+
+@media screen and (max-width: 950px) {
+    .wrapperInfoExperience {
+        display: block;
+
+        .itemInfoExperience {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+

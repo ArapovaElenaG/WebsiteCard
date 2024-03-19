@@ -1,0 +1,378 @@
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Cormorant', serif;
+// font-family: 'Geologica', sans-serif;
+
+
+
+html[datatheme='dark'] {
+  --bg: #000;
+  --bg-panel: hsl(0, 0%, 35%);
+  --gradient-panel: linear-gradient(90deg, #bbbbba, #bbbbba);
+  --color-icons: #949494;
+  --color-icons-active: #cbaf7c;
+  --color-text: #c8c8c8;
+  --color-title: #cbaf7c;
+  --bg-image: linear-gradient(135deg, #a38830, #fff5f7, #a38830);
+  --box-shadow: 0 0 0px #000;
+  --box-shadow-fhoto: 0 0 0px #000;
+  --border: #a38830;
+  --font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+  --font-weight: 700;
+  --filter: brightness(0.8);
+}
+
+html[datatheme='light'] {
+  --bg: #fff;
+  --bg-panel: hsl(0, 0%, 85%);
+  --gradient-panel: linear-gradient(-90deg, #fff, hsl(0, 0%, 85%));
+  // --gradient-panel: linear-gradient(90deg, #fff, #fff);
+  --color-icons: #949494;
+  --color-icons-active: #000;
+  --color-text: #797979;
+  --color-title: #000;
+  --bg-image: linear-gradient(#000, #000);
+  --box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+  --box-shadow-fhoto: 0 20px 20px rgba(0, 0, 0, .15);
+  --border: none;
+  --font-family: 'Geologica', Verdana, Geneva, Tahoma, sans-serif;
+  --font-weight: 100;
+  --filter: brightness(1.1);
+}
+
+html[datatheme='pink'] {
+  --bg: #be9ca1; // #cdb1b4 #ad8d91 #d4bec3 #f5d7db #d2afb7 #e2c7d0 #d2b2b8 #f2dfe2 #c98f9b #b28188d6
+  --bg-panel: #6a6d6e;
+  --gradient-panel: linear-gradient(90deg, #eaeae9, #eaeae9);
+  --color-icons: #d7c5c8; // #867d7e  #736b6b
+  --color-icons-active: #cbaf7c;
+  --color-text: #fff;
+  --color-title: #f2e1c3;
+  --bg-image: linear-gradient(135deg, #d4c080, #ffffff, #d4c080);
+  --box-shadow: 0 0 0px #000;
+  --box-shadow-fhoto: 0 20px 20px rgba(0, 0, 0, .15);
+  --border: #a38830;
+  --font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+  --font-weight: 700;
+  --filter: brightness(1);
+}
+
+html[datatheme='green'] {
+  --bg: #bfc5b8; //#7b8274
+  --bg-panel: #bcb6b3;
+  --gradient-panel: linear-gradient(90deg, #eaeae9, #eaeae9);
+  --color-icons: #75776b; // #867d7e  #736b6b
+  --color-icons-active: #4b423e;
+  --color-text: #4b423e;
+  --color-title: #4b423e;
+  --bg-image: linear-gradient(#4b423e, #4b423e);
+  --box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+  --box-shadow-fhoto: 0 20px 20px rgba(0, 0, 0, .15);
+  --border: none;
+  --font-family: 'Geologica', Verdana, Geneva, Tahoma, sans-serif;
+  --font-weight: 800;
+  --filter: brightness(1);
+}
+
+
+
+$bg: var(--bg);                                      // цвет фона
+$bg-panel: var(--bg-panel);                          // цвет панельки на фото
+$gradient-panel: var(--gradient-panel);              // градиент продолжения фото д/портертной ориентации
+$color-icons: var(--color-icons);                    // цвет иконок не активных
+$color-icons-active: var(--color-icons-active);      // цвет иконок активных если не сработает градитент
+$color-text: var(--color-text);                      // цвет текста
+$color-title: var(--color-title);                    // цвет заголовка если не сработает градиент
+$bg-image: var(--bg-image);                          // градиент для заголовков и активных иконок
+$box-shadow: var(--box-shadow);                      // тень айтемов мейна
+$box-shadow-fhoto: var(--box-shadow-fhoto);          // тень блока с фото
+$border: var(--border);                              // граница рамки
+$font-family: var(--font-family);                    // шрифт заголовков
+$font-weight: var(--font-weight);                    // толщина шрифта заголовков
+$bg-itemInfo: var(--bg-itemInfo);                    // фон айтемов
+$filter: var(--filter);                              // затемнение фото
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+body {
+  background: $bg;
+  transition: background 1s linear 0s;
+}
+
+
+.App {
+  display: flex;
+  font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: $color-text;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .wrapperPhoto {
+    width: 35%;
+    height: 100vh;
+    position: relative;
+    transition: all 1s linear 0s;
+    
+
+    .photo {
+      width: 100%;
+      height: 100vh;
+      background-image: url(../images/DSC00014-4.jpg);
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      filter: $filter;
+      -webkit-filter: $filter;
+      -moz-filter: $filter;
+      -o-filter: $filter;
+      -ms-filter: $filter;
+    }
+  }
+
+  .wrapperContent {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    transition: all 1s linear 0s;
+
+    .layoutGrid {
+      margin: 0 0 10px 10px;
+      display: grid;
+      grid-template-columns: repeat(10, 1.2vw);
+      grid-template-rows: auto;
+    
+      .itemLayoutGrid {
+        width: 1.2vw;
+        height: 1.2vw;
+        font-size: 25px;
+        color: #fff;
+        line-height: 0.3;
+      }
+    }
+
+    .layoutName {
+      background: $bg-panel;
+      padding: 15px 0;
+      width: 100%;
+      position: absolute;
+      bottom: 2vw;
+      left: 4vw;
+      text-align: center;
+      font-size: 16px;
+
+      .h1 {
+        padding-left: 0;
+      }
+    }
+  }
+
+
+  .h {
+    display: inline-block;
+    color: $color-title;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    background-image: $bg-image;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .h1 {
+    font-size: 35px;
+    padding-left: 50px;
+  }
+  
+  .h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+
+@media screen and (max-device-aspect-ratio: 8/5) { 
+  .App {
+    display: block;
+
+    .wrapperPhoto {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+      display: flex;
+      background: $gradient-panel;
+      box-shadow: $box-shadow-fhoto;
+
+      .photo {
+        width: 40%;
+        height: auto;
+        padding: 23% 0;
+        background-position: center 35%;
+        position: relative;
+      }
+    }
+
+    .wrapperContent {
+      width: 60%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: end;
+  
+      .layoutGrid {
+        margin: 0 40px 10px 10px;
+        grid-template-columns: repeat(5, 1.2vw);
+      
+        .itemLayoutGrid {
+          color: #000;
+        }
+      }
+  
+      .layoutName {
+        padding: 15px 0;
+        width: 70%;
+        position: absolute;
+        bottom: 3vw;
+        left: 11.5vw;
+        text-align: center;
+        font-size: 16px;
+  
+        .h1 {
+          padding-left: 0;
+        }
+      }
+    }
+  } 
+}
+
+
+@media screen and (max-width: 950px) {
+  .App {
+    display: block;
+
+    .wrapperPhoto {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+      display: flex;
+      background-image: $gradient-panel;
+      box-shadow: $box-shadow-fhoto;
+
+      .photo {
+        width: 40%;
+        height: auto;
+        padding: 23% 0;
+        background-position: center 35%;
+        position: relative;
+
+      }
+
+      .photoLight {
+        filter: brightness(1);
+        -webkit-filter: brightness(1);
+        -moz-filter: brightness(1);
+        -o-filter: brightness(1);
+        -ms-filter: brightness(1);
+      }
+    }
+
+    .wrapperContent {
+      width: 60%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: end;
+  
+      .layoutGrid {
+        margin: 0 40px 10px 10px;
+        grid-template-columns: repeat(6, 1.5vw);
+      
+        .itemLayoutGrid {
+          color: #000;
+          width: 1.5vw;
+          height: 1.5vw;
+        }
+      }
+  
+      .layoutName {
+        padding: 15px 0;
+        width: 70%;
+        position: absolute;
+        bottom: 3vw;
+        left: 10vw;
+        text-align: center;
+        font-size: 16px;
+  
+        .h1 {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .h1 {
+      font-size: 32px;
+    }
+    
+    .h2 {
+      font-size: 25px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .App {
+    min-width: 450px;
+
+    .wrapperContent {
+      .layoutGrid {
+        grid-template-columns: repeat(6, 1.7vw);
+      
+        .itemLayoutGrid {
+          width: 1.7vw;
+          height: 1.7vw;
+        }
+      } 
+
+      .layoutName {
+        left: 7vw;
+
+      }
+    }
+
+    .h1 {
+      font-size: 28px;
+      padding-left: 20px;
+    }
+    
+    .h2 {
+      font-size: 21px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+

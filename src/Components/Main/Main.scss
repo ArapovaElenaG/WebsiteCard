@@ -1,0 +1,89 @@
+@import '../App.scss';
+
+
+
+.main {
+    width: 61%;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 30px 0 0 50px;
+
+    .wrapperInfo {
+        max-height: calc(100vh - 83px);
+        min-height: calc(100vh - 83px);
+        overflow: auto;
+        padding: 0 50px;
+
+        [class^="itemInfo"] {
+            white-space: pre-wrap;
+            padding: 15px;
+            box-shadow: $box-shadow;
+            border: 1px solid $border;
+            border-image: $bg-image;
+            border-image-slice: 1;
+            margin: 35px 0;
+        }
+    }
+
+    .wrapperInfo::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+      
+    .wrapperInfo::-webkit-scrollbar-track {
+        background: $bg-panel;
+        border-radius: 5px;
+    }
+      
+    .wrapperInfo::-webkit-scrollbar-thumb {
+        background-color: $color-title;
+        border-radius: 5px;
+        border: 2px solid $bg-panel;
+    }
+      
+    .wrapperInfo::-webkit-scrollbar-thumb:hover {
+        background-image: $bg-image;
+    }
+}
+
+
+
+
+@media screen and (max-device-aspect-ratio: 8/5) {
+    .main {
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        padding: 50px 0 30px 20px;
+    
+        .wrapperInfo {
+            max-height: fit-content;
+            min-height: auto;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 950px) {
+    .main {
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        padding: 50px 0 30px 0;
+    
+        .wrapperInfo {
+            max-height: fit-content;
+            min-height: auto;
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .main {
+        .wrapperInfo {
+            padding: 0 20px;
+        }
+    }
+}
