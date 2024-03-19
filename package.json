@@ -2,7 +2,7 @@
   "name": "card-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ArapovaElenaG.github.io/WebsiteCard",
+  "homepage": "https://arapovaelenag.github.io/WebsiteCard",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
